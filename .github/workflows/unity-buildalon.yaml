@@ -56,7 +56,7 @@ jobs:
       - uses: buildalon/unity-setup@v1
         with:
           build-targets: ${{ matrix.build-target }}
-          version-file: "Source/ProjectSettings/ProjectVersion.txt"
+          version-file: "**/ProjectSettings/ProjectVersion.txt"
 
       # Activates the installation with the provided credentials
       # https://github.com/XRTK/activate-unity-license
