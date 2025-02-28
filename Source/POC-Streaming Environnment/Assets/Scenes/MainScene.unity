@@ -554,6 +554,8 @@ MonoBehaviour:
   - {fileID: 587556775007114372, guid: c563ec56aa0a82f469d28c054df2d9fe, type: 3}
   - {fileID: 587556775007114372, guid: 3f09b9ca2e4e8414b8a2854113caad83, type: 3}
   mapFile: 
+  chunkSize: 10
+  renderDistance: 2
 --- !u!4 &1232262657
 Transform:
   m_ObjectHideFlags: 0
