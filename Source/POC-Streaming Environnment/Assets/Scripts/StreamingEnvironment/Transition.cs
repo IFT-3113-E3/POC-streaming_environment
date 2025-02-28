@@ -29,11 +29,10 @@ public class Transition : MonoBehaviour
 
     private void CancelOtherTransitions()
     {
-        foreach (GameObject obj in SceneManager.GetActiveScene().GetRootGameObjects())
+        var transitions = FindObjectsByType<Transition>(FindObjectsSortMode.None);
+        foreach (var transition in transitions)
         {
-            Debug.Log($"[{currentScene}] Checking for other transitions: {obj.name}");
-            Transition transition = obj.GetComponent<Transition>();
-            if (transition != null && transition != this)
+            if (transition != this)
             {
                 transition.CancelTransition();
             }

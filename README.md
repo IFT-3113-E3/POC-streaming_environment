@@ -1,4 +1,4 @@
-# POC-streaming_environnment
+# POC-streaming_environment
 
 L’objectif de ce prototype est d’implémenter un système de transition fluide entre différents niveaux sans temps de chargement apparent. Inspiré des anciennes routes dans Pokémon, le joueur traverse une zone de transition (un tunnel, un couloir, un passage) qui sert de tampon pour charger le prochain niveau en arrière-plan. Une fois cette transition terminée, le nouveau niveau est activé et la scène précédente est déchargée, garantissant une continuité immersive.
 

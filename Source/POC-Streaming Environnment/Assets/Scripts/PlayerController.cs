@@ -27,6 +27,11 @@ public class PlayerController : MonoBehaviour
         {
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
         }
+
+        Camera.main.transform.Rotate(Vector3.left * Input.GetAxis("Mouse Y"));
+        Camera.main.transform.Rotate(Vector3.up * Input.GetAxis("Mouse X"));
+
+        Camera.main.transform.position = transform.position;
     }
 
     internal void OnCollisionStay(Collision collision)
