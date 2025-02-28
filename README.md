@@ -1,12 +1,34 @@
-# POC-streaming_environment
+# [POC] Streaming et Tile Mapping
+### **Défi Prototype – Streaming Environment**
 
+#### **Objectif :**
 L’objectif de ce prototype est d’implémenter un système de transition fluide entre différents niveaux sans temps de chargement apparent. Inspiré des anciennes routes dans Pokémon, le joueur traverse une zone de transition (un tunnel, un couloir, un passage) qui sert de tampon pour charger le prochain niveau en arrière-plan. Une fois cette transition terminée, le nouveau niveau est activé et la scène précédente est déchargée, garantissant une continuité immersive.
 
+#### **Description :**
 Le joueur évolue dans un environnement composé de plusieurs niveaux connectés par des zones de transition. Lorsqu’il atteint l’extrémité d’un niveau (ex. une sortie de route ou une porte), une scène intermédiaire se charge immédiatement pour masquer le chargement du prochain niveau principal. Le joueur mettra légèrement plus de temps à traverser cette transition que nécessaire, laissant au moteur le temps de charger les ressources du prochain environnement. Une fois cette phase terminée, la transition est désactivée et le joueur entre dans le nouveau niveau sans coupure visible.
 
-Éléments techniques à explorer :
+#### **Éléments techniques à explorer :**
 - **Gestion des scènes dans Unity :** Chargement asynchrone des scènes avec SceneManager.LoadSceneAsync().
 - **Optimisation des ressources :** Chargement différé des assets 3D, textures et sons pour améliorer la fluidité.
 - **Transition musicale et sonore :** Assurer une continuité sonore sans interruption pour renforcer l’immersion.
 
+#### **Critères de réussite**
 Le prototype doit garantir une transition fluide entre les niveaux sans écran de chargement apparent ni interruption notable. Le passage par une zone de transition doit masquer le chargement en arrière-plan, tout en maintenant une continuité sonore et des performances stables pour préserver l’immersion du joueur.
+
+
+
+### **Défi Prototype – Système de Tile Mapping en 3D**
+
+#### **Objectif :**
+Ce prototype vise à créer un système flexible de tile mapping en 3D permettant de concevoir des niveaux facilement. Le rendu utilisera des assets low poly pixelisés via un shader de post-processing. L’objectif est de tester la modularité du système et d’assurer une fluidité optimale, notamment lors des transitions entre différentes zones.
+
+#### **Description :**
+Le monde sera construit à partir d’un système de tiles en 3D disposés sur une grille. Chaque tile représentera une portion du décor (sol, mur, éléments interactifs) et pourra être agencé de manière à former des niveaux variés. Bien que le terrain ne soit pas modifiable par le joueur dans ce prototype, l’outil devra permettre aux développeurs de créer des environnements rapidement et efficacement.
+
+#### **Éléments techniques à explorer :**
+- **Structure de la grille** : Utilisation d’un système de coordonnées pour organiser les tiles en 3D (grille fixe ou octree si nécessaire).
+- **Optimisation du rendu** : Réduction du nombre de draw calls en fusionnant les meshes adjacents ou en utilisant des chunks de tiles.
+- **Streaming des tiles** : Chargement dynamique des portions du niveau selon la position du joueur, combiné avec la technique de transition étudiée dans le défi précédent.
+
+#### **Critères de réussite :**
+Le prototype doit permettre de concevoir des niveaux en assemblant des tiles 3D de manière intuitive, tout en maintenant un rendu fluide. La gestion du streaming et des performances sera essentielle pour éviter les chutes de framerate, et l’effet de pixelisation devra être appliqué de manière cohérente sur l’ensemble du décor.
