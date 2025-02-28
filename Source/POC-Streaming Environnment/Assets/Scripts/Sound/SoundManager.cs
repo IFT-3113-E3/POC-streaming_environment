@@ -5,9 +5,7 @@ using UnityEngine;
 
 public class SoundManager : Singleton<SoundManager>
 {
-    public float bpm = 120f;          // Battements par minute
     public float fadeDuration = 5.0f;   // Durée du fondu croisé
-    private float beatDuration = 0f;  // Durée d'un battement
     private float lastTime = 0f;      // Dernier temps de mise à jour
     private float timeBeforeSwitch = 30.0f; // Temps avant de changer de piste
     private static readonly List<string> melodies = new() { "Lena_Raine-Creator", "C418-Aria_Math" };
@@ -23,7 +21,6 @@ public class SoundManager : Singleton<SoundManager>
     internal override void Awake()
     {
         base.Awake();
-        beatDuration = 60f / bpm;
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
