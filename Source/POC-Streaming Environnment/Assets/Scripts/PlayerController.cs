@@ -4,6 +4,8 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
     public float jumpForce = 5f;
+    public float cameraDistance = 5f;
+    public float cameraHeight = 2f;
 
     private Rigidbody rb;
     private bool isGrounded;
@@ -18,20 +20,32 @@ public class PlayerController : MonoBehaviour
 
     internal void Update()
     {
+        HandleMovement();
+        HandleJump();
+        UpdateCameraPosition();
+    }
+
+    private void HandleMovement()
+    {
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
         Vector3 move = new Vector3(moveX, 0, moveZ).normalized * speed;
         rb.linearVelocity = new Vector3(move.x, rb.linearVelocity.y, move.z);
+    }
 
+    private void HandleJump()
+    {
         if (isGrounded && Input.GetButtonDown("Jump"))
         {
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
         }
+    }
 
-        Camera.main.transform.Rotate(Vector3.left * Input.GetAxis("Mouse Y"));
-        Camera.main.transform.Rotate(Vector3.up * Input.GetAxis("Mouse X"));
-
-        Camera.main.transform.position = transform.position;
+    private void UpdateCameraPosition()
+    {
+        Vector3 cameraPosition = transform.position + Vector3.back * cameraDistance + Vector3.up * cameraHeight;
+        Camera.main.transform.position = cameraPosition;
+        Camera.main.transform.LookAt(transform.position + Vector3.up * cameraHeight / 2);
     }
 
     internal void OnCollisionStay(Collision collision)

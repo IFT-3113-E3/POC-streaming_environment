@@ -20,7 +20,7 @@ Le prototype doit garantir une transition fluide entre les niveaux sans écran d
 ### **Défi Prototype – Système de Tile Mapping en 3D**
 
 #### **Objectif :**
-Ce prototype vise à créer un système flexible de tile mapping en 3D permettant de concevoir des niveaux facilement. Le rendu utilisera des assets low poly pixelisés via un shader de post-processing. L’objectif est de tester la modularité du système et d’assurer une fluidité optimale, notamment lors des transitions entre différentes zones.
+Ce prototype vise à créer un système flexible de tile mapping en 3D permettant de concevoir des niveaux facilement. L’objectif est de tester la modularité du système et d’assurer une fluidité optimale, notamment lors des transitions entre différentes zones.
 
 #### **Description :**
 Le monde sera construit à partir d’un système de tiles en 3D disposés sur une grille. Chaque tile représentera une portion du décor (sol, mur, éléments interactifs) et pourra être agencé de manière à former des niveaux variés. Bien que le terrain ne soit pas modifiable par le joueur dans ce prototype, l’outil devra permettre aux développeurs de créer des environnements rapidement et efficacement.
@@ -31,4 +31,4 @@ Le monde sera construit à partir d’un système de tiles en 3D disposés sur u
 - **Streaming des tiles** : Chargement dynamique des portions du niveau selon la position du joueur, combiné avec la technique de transition étudiée dans le défi précédent.
 
 #### **Critères de réussite :**
-Le prototype doit permettre de concevoir des niveaux en assemblant des tiles 3D de manière intuitive, tout en maintenant un rendu fluide. La gestion du streaming et des performances sera essentielle pour éviter les chutes de framerate, et l’effet de pixelisation devra être appliqué de manière cohérente sur l’ensemble du décor.
+Le prototype doit permettre de concevoir des niveaux en assemblant des tiles 3D de manière intuitive, tout en maintenant un rendu fluide. La gestion du streaming et des performances sera essentielle pour éviter les chutes de framerate. Les transitions entre les zones de la grille devront être transparentes, sans coupure ni latence perceptible pour le joueur.
