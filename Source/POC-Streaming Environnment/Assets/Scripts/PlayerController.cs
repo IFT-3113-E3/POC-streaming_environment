@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
         HandleJump();
         UpdateCameraPosition();
+        HandleEscape();
     }
 
     private void HandleMovement()
@@ -46,6 +47,14 @@ public class PlayerController : MonoBehaviour
         Vector3 cameraPosition = transform.position + Vector3.back * cameraDistance + Vector3.up * cameraHeight;
         Camera.main.transform.position = cameraPosition;
         Camera.main.transform.LookAt(transform.position + Vector3.up * cameraHeight / 2);
+    }
+
+    private void HandleEscape()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     internal void OnCollisionStay(Collision collision)
