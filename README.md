@@ -6,7 +6,7 @@ Ce projet a pour objectif de réaliser des prototypes de streaming et de tile ma
 
 ## **Comment exécuter le projet ?**
 
-Pour exécuter le projet, vous aurez besoin de Unity 2019.4.28f1 ou d'une version ultérieure. Voici les étapes à suivre :
+Pour exécuter le projet, vous aurez besoin de Unity 6000.0.40f1 ou d'une version ultérieure. Voici les étapes à suivre :
 
 1. Clonez le dépôt Git sur votre machine locale.
 2. Ouvrez Unity Hub et ajoutez le projet en cliquant sur le bouton "Add" -> "Add project from disk" et en sélectionnant le dossier `Source/StreamingEnvironment` depuis la racine du projet.
