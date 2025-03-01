@@ -1,4 +1,20 @@
 # [POC] Streaming et Tile Mapping
+
+## **Introduction**
+
+Ce projet a pour objectif de réaliser des prototypes de streaming et de tile mapping en 3D pour tester leur faisabilité et leur efficacité dans le cadre du développement de jeux vidéo. Les prototypes visent à explorer différentes approches pour assurer une transition fluide entre les niveaux et créer des environnements de jeu modulaires et évolutifs.
+
+## **Comment exécuter le projet ?**
+
+Pour exécuter le projet, vous aurez besoin de Unity 2019.4.28f1 ou d'une version ultérieure. Voici les étapes à suivre :
+
+1. Clonez le dépôt Git sur votre machine locale.
+2. Ouvrez Unity Hub et ajoutez le projet en cliquant sur le bouton "Add" -> "Add project from disk" et en sélectionnant le dossier `Source/StreamingEnvironment` depuis la racine du projet.
+3. Sélectionnez le projet dans Unity Hub et ouvrez-le dans Unity.
+4. Une fois le projet ouvert, vous pouvez exécuter les prototypes en cliquant sur le bouton "Play" dans l'éditeur Unity.
+
+## **Défis**
+
 ### **Défi Prototype – Streaming Environment**
 
 #### **Objectif :**
@@ -12,10 +28,8 @@ Le joueur évolue dans un environnement composé de plusieurs niveaux connectés
 - **Optimisation des ressources :** Chargement différé des assets 3D, textures et sons pour améliorer la fluidité.
 - **Transition musicale et sonore :** Assurer une continuité sonore sans interruption pour renforcer l’immersion.
 
-#### **Critères de réussite**
+#### **Critères de réussite :**
 Le prototype doit garantir une transition fluide entre les niveaux sans écran de chargement apparent ni interruption notable. Le passage par une zone de transition doit masquer le chargement en arrière-plan, tout en maintenant une continuité sonore et des performances stables pour préserver l’immersion du joueur.
-
-
 
 ### **Défi Prototype – Système de Tile Mapping en 3D**
 
