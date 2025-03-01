@@ -13,6 +13,12 @@ Pour exécuter le projet, vous aurez besoin de Unity 2019.4.28f1 ou d'une versio
 3. Sélectionnez le projet dans Unity Hub et ouvrez-le dans Unity.
 4. Une fois le projet ouvert, vous pouvez exécuter les prototypes en cliquant sur le bouton "Play" dans l'éditeur Unity.
 
+## **Controles**
+
+- **Déplacement :** Utilisez les touches fléchées ou les touches WASD pour déplacer le personnage.
+- **Jump :** Appuyez sur la barre d'espace pour sauter.
+- **Quitter :** Appuyez sur la touche `Echap` pour quitter l'application.
+
 ## **Défis**
 
 ### **Défi Prototype – Streaming Environment**
