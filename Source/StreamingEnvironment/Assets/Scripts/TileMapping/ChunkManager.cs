@@ -30,10 +30,15 @@ public class ChunkManager : MonoBehaviour
     private MapData mapData;
     private Vector2Int lastPlayerChunk;
 
-    internal void Start()
+    internal void Awake()
     {
-        string filePath = GetMapFilePath();
-        LoadMap(filePath);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    internal void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log($"Scene loaded: {scene.name} ({GetMapFilePath()})");
+        LoadMap(GetMapFilePath());
         UpdateChunks();
     }
 
@@ -41,7 +46,7 @@ public class ChunkManager : MonoBehaviour
     {
         return string.IsNullOrEmpty(mapFile)
             ? Path.Combine(Application.streamingAssetsPath, $"Maps/Generated{SceneManager.GetActiveScene().name}.json")
-            : Path.Combine(Application.streamingAssetsPath, mapFile);
+            : Path.Combine(Application.streamingAssetsPath, $"Maps/{mapFile}.json");
     }
 
     private void LoadMap(string filePath)
